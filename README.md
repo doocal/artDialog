@@ -23,6 +23,10 @@ npm install --save-dev art-dialog
 
 ##	更新历史
 
+7.0.1
+
+1. 修复弹窗按扭刷新多次绑定的问题
+
 7.0.0
 
 1. 支持 Webpack
