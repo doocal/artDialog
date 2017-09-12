@@ -437,6 +437,21 @@ artDialog.oncreate = $.noop;
 
 /** 获取最顶层的对话框API */
 artDialog.getCurrent = function() {
+    if (!Popup.current) {
+
+        // 获取最大的zindex值得
+        var maxzIndex = Math.max.apply(null, $.map(dialog.list, function (e) {
+            return e.zIndex;
+        }));
+
+        for (var item in dialog.list) {
+            var el = dialog.list[item];
+            if (el.zIndex == maxzIndex) {
+                Popup.current = el;
+                break;
+            }
+        }
+    }
     return Popup.current;
 };
 
