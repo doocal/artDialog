@@ -26,6 +26,7 @@ npm install --save-dev art-dialog
 7.0.1
 
 1. 修复弹窗按扭刷新多次绑定的问题
+2. 修复多层弹窗关闭一个后，getCurrent() 方法获取不到对象的问题。
 
 7.0.0
 
